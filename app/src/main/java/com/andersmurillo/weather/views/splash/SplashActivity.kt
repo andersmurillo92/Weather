@@ -1,5 +1,7 @@
 package com.andersmurillo.weather.views.splash
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +12,7 @@ import android.view.animation.AccelerateInterpolator
 import androidx.databinding.DataBindingUtil
 import com.andersmurillo.weather.R
 import com.andersmurillo.weather.databinding.ActivitySplashBinding
+import com.andersmurillo.weather.views.searcher.SearchActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -50,7 +53,12 @@ class SplashActivity : AppCompatActivity() {
 
         val mHandler1 = Handler()
         mHandler1.postDelayed({
-            // TODO: go to next activity
+            goToActivity(SearchActivity::class.java)
+            finish()
         }, 1750)
+    }
+
+    private fun <T: Activity>goToActivity(classType: Class<T>) {
+        startActivity(Intent(this, classType))
     }
 }

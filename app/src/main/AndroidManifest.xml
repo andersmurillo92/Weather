@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andersmurillo.weather">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".WeatherAPIApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".views.searcher.SearchActivity" />
     </application>
 
 </manifest>
