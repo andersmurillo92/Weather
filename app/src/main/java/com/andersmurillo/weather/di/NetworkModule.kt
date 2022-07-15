@@ -1,6 +1,7 @@
 package com.andersmurillo.weather.di
 
 import com.andersmurillo.weather.data.network.LocationApiClient
+import com.andersmurillo.weather.data.network.WeatherApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,4 +39,10 @@ object NetworkModule {
     fun provideLocationApiClient(retrofit: Retrofit):LocationApiClient{
         return retrofit.create(LocationApiClient::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideWeatherApiClient(retrofit: Retrofit): WeatherApiClient =
+        retrofit.create(WeatherApiClient::class.java)
+
 }

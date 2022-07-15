@@ -3,7 +3,6 @@ package com.andersmurillo.weather.data.network
 import com.andersmurillo.weather.data.model.LocationModel
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface LocationApiClient {
