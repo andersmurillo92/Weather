@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.searcher.SearchDetailsActivity">
+    tools:context=".views.searcher.SearchDetailsActivity"
+    android:layout_marginHorizontal="16dp">
+
+    <TextView
+        android:text="Name"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
